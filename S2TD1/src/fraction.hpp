@@ -7,6 +7,16 @@ struct Fraction {
     unsigned int denominator { 1 };
 
     void display();
+
+    // Exercice 5 
+    Fraction& operator+=(Fraction const& f);
+    Fraction& operator-=(Fraction const& f);
+    Fraction& operator*=(Fraction const& f);
+    Fraction& operator/=(Fraction const& f);
+
+    // Exercice 6
+    float to_float() const;
+    operator float() const;
 };
 
 
@@ -30,3 +40,10 @@ bool operator<(Fraction const& f1, Fraction const& f2);
 bool operator<=(Fraction const& f1, Fraction const& f2);
 bool operator>(Fraction const& f1, Fraction const& f2);
 bool operator>=(Fraction const& f1, Fraction const& f2);
+
+
+
+
+
+
+

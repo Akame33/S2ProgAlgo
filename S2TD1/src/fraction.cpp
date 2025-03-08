@@ -72,6 +72,57 @@ bool operator>=(Fraction const& f1, Fraction const& f2) {
 }
 
 // Exercice 5 
+Fraction& Fraction::operator+=(Fraction const& f) {
+    numerator = numerator * f.denominator + f.numerator * denominator;
+    denominator = denominator * f.denominator;
+    *this = simplify(*this);
+    return *this;
+}
+
+Fraction& Fraction::operator-=(Fraction const& f) {
+    numerator = numerator * f.denominator - f.numerator * denominator;
+    denominator = denominator * f.denominator;
+    *this = simplify(*this);
+    return *this;
+}
+
+Fraction& Fraction::operator*=(Fraction const& f) {
+    numerator *= f.numerator;
+    denominator *= f.denominator;
+    *this = simplify(*this);
+    return *this;
+}
+
+Fraction& Fraction::operator/=(Fraction const& f) {
+    numerator *= f.denominator;
+    denominator *= f.numerator;
+    *this = simplify(*this);
+    return *this;
+}
+
+// Réécriture des opérateurs binaires en utilisant les opérateurs d'affectation
+Fraction operator+(Fraction f1, Fraction const& f2) {
+    return f1 += f2;
+}
+
+Fraction operator-(Fraction f1, Fraction const& f2) {
+    return f1 -= f2;
+}
+
+Fraction operator*(Fraction f1, Fraction const& f2) {
+    return f1 *= f2;
+}
+
+Fraction operator/(Fraction f1, Fraction const& f2) {
+    return f1 /= f2;
+}
 
 
+// Exercice 6
+float Fraction::to_float() const {
+    return static_cast<float>(numerator) / static_cast<float>(denominator);
+}
 
+Fraction::operator float() const {
+    return to_float();
+}

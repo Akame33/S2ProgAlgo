@@ -12,8 +12,8 @@ int main()
     std::cout << f2;
     std::cout << std::endl;
 
-// Exercice 2
-    std::cout << "Exercice 1-2 \n";
+// Exercice 1-2
+    std::cout << "Exercice 1-2 \n"; {
 
     Fraction f3 = f1 + f2;
     std::cout << "f1 + f2 = " << f3 << std::endl;
@@ -26,7 +26,7 @@ int main()
 
     f3 = f1 / f2;
     std::cout << "f1 / f2 = " << f3 << std::endl;
-
+}
 
 // Exercice 3
     std::cout << "Exercice 3 \n";
@@ -70,6 +70,37 @@ int main()
     } else {
         std::cout << "f1 inférieur à f2" << std::endl;
     }
+
+// 5
+
+  std::cout << "Exercice 5\n";
+    
+    Fraction f3 = f1;
+    f3 += f2;
+    std::cout << "f1 += f2 = " << f3 << std::endl;
+
+    f3 = f1;
+    f3 -= f2;
+    std::cout << "f1 -= f2 = " << f3 << std::endl;
+
+    f3 = f1;
+    f3 *= f2;
+    std::cout << "f1 *= f2 = " << f3 << std::endl;
+
+    f3 = f1;
+    f3 /= f2;
+    std::cout << "f1 /= f2 = " << f3 << std::endl;
+
+
+    // Exercice 6
+    std::cout << "Exercice 6\n";
+    float floatNumber = static_cast<float>(f1);
+    std::cout << "f1 en format de type float = " << floatNumber << std::endl;
+
+
+    // Pour aller plus loin 
+    
+    
 
         return 0;
     }
