@@ -30,30 +30,5 @@ int main()
         std::cout << "Erreur" << std::endl;
     }
 
-    std::cout << "TD 2 exercice 2" << std::endl;
-
-    try
-    {
-        std::vector<Token> tokenized = tokenize(tokens);
-
-        for (const Token &token : tokenized)
-        {
-            if (token.type == TokenType::OPERAND)
-            {
-                std::cout << "Nombre : " << token.value << std::endl;
-            }
-            else
-            {
-                std::cout << "Operateur : " << static_cast<int>(token.op) << std::endl;
-            }
-        }
-
-        std::cout << "Résultat : " << npi_evaluate(tokenized) << std::endl;
-    }
-    catch (...)
-    {
-        std::cout << "Erreur" << std::endl;
-    }
-
     return 0;
 }
