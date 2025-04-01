@@ -73,7 +73,20 @@ std::vector<std::string> split_string(std::string const& str){
     return mots;
 }
 
-// Exercice 3   - Palindrome
+// Exercice 3 - Palindrome
 bool palindromeOuPas(const std::string& str){
     return std::equal(std::begin(str), std::end(str), std::rbegin(str));
+}
+
+// Exercice pour aller plus loin - lambda
+int sommeCarre(std::vector<int> const &v)
+{
+    return std::accumulate(v.begin(), v.end(), 0, [](int a, int b) { return a + (b * b); });
+}
+
+int paire(std::vector<int> const &v)
+{
+    return std::accumulate(v.begin(), v.end(), 1, 
+        [](int a, int b) { return (b % 2 == 0) ? a * b : a; }
+    );
 }

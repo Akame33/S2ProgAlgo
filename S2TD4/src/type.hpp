@@ -23,7 +23,8 @@ std::vector<std::string> split_string(std::string const& str);
 bool palindromeOuPas(const std::string& str);
 
 // Exercice pour aller plus loin - Lambda
-std::vector<int> sumCarre(std::string const& str);
+int sommeCarre(std::vector<int> const &v);
+int paire(std::vector<int> const &v);
 
 
 
